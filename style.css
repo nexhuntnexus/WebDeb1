@@ -7,10 +7,17 @@
     background-color: #111;
     box-sizing: border-box;
 }
+
+.title{
+    margin: 2rem auto;
+    color: #fff;
+    text-align: center;
+}
+
 #block_view{
     position: absolute;
     background-color: #000;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
     z-index: 5;
     transition: all 200ms ease-in-out;
@@ -29,9 +36,9 @@
     cursor: grabbing;
     width: 0.3rem;
     z-index: 6;
-    animation: roll 2000ms linear infinite alternate;
 }
-
+/* animation: roll 2000ms linear infinite alternate; */
+/* 
 @keyframes roll {
     0%{
         transform: translate(0px, 10px);
@@ -39,7 +46,7 @@
     50%{
         transform: translate(0, 0);
     }
-}
+} */
 
 main {
     display: flex;
@@ -50,14 +57,13 @@ main {
 
 #container {
     padding: 10px;
-    /* background-color: #ccc; */
+    background-color: #ccc;
     margin: 1rem auto;
     width: 95vw;
     place-content: center;
     display: grid;
-
-    /* max-width: 1100px; */
-    grid-gap: 4rem;
+    max-width: 1100px;
+    grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
 }
 
@@ -66,16 +72,17 @@ main {
     width: 100%;
     position: relative;
     border-radius: 10px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .img-container {
-    overflow: hidden;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.item img {
-    overflow: hidden;
+.item .img-container img {
     transition: all 200ms ease-in-out;
     border-radius: 10px;
     height: 100%;
@@ -84,116 +91,69 @@ main {
 }
 
 .item:hover img {
-    scale: 1.2;
+    scale: 1.3;
 }
 
-.item .desc {
-    color: #fff;
+.like_container {
     position: absolute;
-    bottom: 0;
-    background-color: #ffffff63;
-    backdrop-filter: blur(4px);
-    /* left: 50%; */
-    /* transform: translateY(100%); */
-    /* height: 5rem; */
-    padding: 1rem;
-    border-radius: 5px;
-    left: 0;
+    top: 0;
     right: 0;
-    transition: all 300ms ease-out;
-}
-
-.desc h2 {
-    font-weight: 800;
-    text-align: center;
-    background-color: transparent;
-    padding-bottom: 0.5rem;
-}
-
-.desc_i b,
-.desc_i div {
-    background-color: transparent;
-}
-
-.desc_i {
-    background-color: transparent;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px;
+    transition: all 200ms ease-in-out;
+    transform: translateY(-100px);
+    background-color: #ffffff11;
+    backdrop-filter: blur(10px);
+    border-radius:0 0 10px 10px;
+}
+
+.like_container h3, .like_container img{
+    background-color: transparent;
+    color: #fff;
+}
+
+.like_container img{
+    height: 25px;
+    padding: 4px ;
+}
+
+.item:hover .like_container{
+    transform: translateY(0px);
+    z-index: 10;
+}
+
+.inner_container{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
     justify-content: space-between;
-    font-size: 0.75rem;
-}
-
-.item:hover .desc {
-    transform: translateY(0%);
-}
-
-.decor1,
-.decor2,
-.decor3 {
+    transition: all 200ms ease-in-out;
+    transform: translateY(100px);
     position: absolute;
-    height: 80px;
-    aspect-ratio: 5/6;
-    border-radius: 5px;
-    transition: all 300ms ease-out;
-    z-index: 0;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.decor1{
-    transform-origin: bottom left;
-    background-color: #ff2426;
     bottom: 0;
-    left: 0;
+    width: 100%;
+    background-color: #ffffff11;
+    backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0 0;
 }
 
-.decor1 img, .decor2 img, .decor3 img{
-    padding: 1px;
-    border-radius: 2px;
-    background-size: contain;
+.item .img-container .inner_container img{
     height: 30px;
     width: 30px;
+    border-radius: 2px;
     background-color: #fff;
 }
-.decor2 img{
-    background-color: transparent;
 
-}
-.decor1 p, .decor2 p, .decor3 p{
+.inner_container h4{
     color: #fff;
-    font-size: 8px;
+    font-size: 0.8rem;
+    padding: 10px 1rem;
     background-color: transparent;
-    font-weight: bold;
-}
-
-.decor2 {
-    background-color: orange;
-    transform-origin: bottom right;
-    top: 50%;
-    right: 0;
-}
-
-.decor3 {
-    background-color: #ff4e4f;
-    right: 0;
-}
-
-.item:hover .decor1 {
-    transform: rotate(-5deg) translate(-80%, -10%);
-    opacity: 1;
 
 }
-
-.item:hover .decor2 {
-    transform: rotate(5deg) translate(100%, -10%);
-    opacity: 1;
-}
-
-.item:hover .decor3 {
-    transform: rotate(10deg);
-    opacity: 1;
+.item:hover .inner_container{
+    transform: translateY(0px);
 }
