@@ -8,35 +8,37 @@
     box-sizing: border-box;
 }
 
-.title{
+.title {
     margin: 2rem auto;
     color: #fff;
     text-align: center;
 }
 
-#block_view{
+#block_view {
     position: absolute;
     background-color: #000;
-    /* height: 100vh; */
+    height: 100vh;
     width: 100vw;
     z-index: 5;
     transition: all 200ms ease-in-out;
 }
-#switch:hover{
+
+#switch:hover {
     animation-play-state: paused;
 }
 
-#switch{
+#switch {
     margin: 5px;
     border-radius: 7px;
     position: absolute;
-    right: 0;
+    bottom: 0;
     height: 0.3rem;
     background-color: #fff;
     cursor: grabbing;
     width: 0.3rem;
     z-index: 6;
 }
+
 /* animation: roll 2000ms linear infinite alternate; */
 /* 
 @keyframes roll {
@@ -52,14 +54,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #container {
+    margin: 1rem;
     padding: 10px;
     background-color: #ccc;
-    margin: 1rem auto;
-    width: 95vw;
+    /* margin: 1rem auto; */
+    /* width: 95vw; */
     place-content: center;
     display: grid;
     max-width: 1100px;
@@ -107,25 +110,26 @@ main {
     transform: translateY(-100px);
     background-color: #ffffff11;
     backdrop-filter: blur(10px);
-    border-radius:0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
 }
 
-.like_container h3, .like_container img{
+.like_container h3,
+.like_container img {
     background-color: transparent;
     color: #fff;
 }
 
-.like_container img{
+.like_container img {
     height: 25px;
-    padding: 4px ;
+    padding: 4px;
 }
 
-.item:hover .like_container{
+.item:hover .like_container {
     transform: translateY(0px);
     z-index: 10;
 }
 
-.inner_container{
+.inner_container {
     display: flex;
     align-items: center;
     padding: 10px 10px;
@@ -140,20 +144,22 @@ main {
     border-radius: 10px 10px 0 0;
 }
 
-.item .img-container .inner_container img{
+.item .img-container .inner_container img {
     height: 30px;
     width: 30px;
+    padding: 2px;
     border-radius: 2px;
     background-color: #fff;
 }
 
-.inner_container h4{
+.inner_container h4 {
     color: #fff;
     font-size: 0.8rem;
     padding: 10px 1rem;
     background-color: transparent;
 
 }
-.item:hover .inner_container{
+
+.item:hover .inner_container {
     transform: translateY(0px);
 }
