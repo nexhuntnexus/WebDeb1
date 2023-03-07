@@ -60,7 +60,7 @@ main {
 #container {
     margin: 1rem;
     padding: 10px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     /* margin: 1rem auto; */
     /* width: 95vw; */
     place-content: center;
