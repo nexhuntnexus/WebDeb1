@@ -17,7 +17,7 @@
 #block_view {
     position: absolute;
     background-color: #000;
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     z-index: 5;
     transition: all 200ms ease-in-out;
