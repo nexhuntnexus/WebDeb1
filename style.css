@@ -38,7 +38,7 @@
     position: fixed;
     transition: all 200ms ease;
     border-radius: 50%;
-    background-color: red;
+    background-color: #fff;
     cursor: wait;
     cursor: grabbing;
     z-index: 7;
